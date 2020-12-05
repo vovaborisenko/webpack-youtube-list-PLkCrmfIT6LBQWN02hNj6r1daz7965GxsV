@@ -9,5 +9,13 @@
 ---
 <a id="contain"></a>
 ## Содержание
+ - [Начальное знакомство с Webpack](#lesson_1)
+
+<a id="lesson_1"></a>
+## Начальное знакомство с Webpack
+
+[Настройка Webpack 4 шаблона. Установка Babel 7 и webpack dev server. Настройка js на примере vue.](https://www.youtube.com/watch?v=JcKRovPhGo8&list=PLkCrmfIT6LBQWN02hNj6r1daz7965GxsV)
+
+В этом видео мы настроим шаблон Webpack 4, подключим babel 7, а также разберемся с  webpack dev server.  Подключим js библиотеки на примере vue.js и bootstrap, настроим loaders.
 
 [Содержание ^](#contain)

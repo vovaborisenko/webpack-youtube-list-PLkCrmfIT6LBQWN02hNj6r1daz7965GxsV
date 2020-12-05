@@ -1,0 +1,36 @@
+{
+  "name": "webpacktemplate",
+  "version": "1.0.0",
+  "description": "Webpack Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vovaborisenko/webpack-youtube-list-PLkCrmfIT6LBQWN02hNj6r1daz7965GxsV.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Uladzimir Barysenka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vovaborisenko/webpack-youtube-list-PLkCrmfIT6LBQWN02hNj6r1daz7965GxsV/issues"
+  },
+  "homepage": "https://github.com/vovaborisenko/webpack-youtube-list-PLkCrmfIT6LBQWN02hNj6r1daz7965GxsV#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "babel-loader": "^8.2.2",
+    "path": "^0.12.7",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
+}
