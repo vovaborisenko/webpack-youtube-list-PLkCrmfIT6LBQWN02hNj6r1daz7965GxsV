@@ -2,6 +2,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
+const { VueLoaderPlugin } = require('vue-loader')
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
@@ -14,7 +15,10 @@ module.exports = {
     paths: PATHS,
   },
   entry: {
-    app: PATHS.src,
+    app: [
+      'babel-polyfill',
+      PATHS.src,
+    ],
   },
   output: {
     filename: `${PATHS.assets}/js/[name].js`,
@@ -27,6 +31,16 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: '/node_modules/',
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          loader: {
+            scss: 'vue-style-loader!css-loader!sass-loader',
+            sass: 'vue-style-loader!css-loader!sass-loader',
+          },
+        },
       },
       {
         test: /\.(png|jpg|giff|svg)$/,
@@ -91,6 +105,11 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    alias: {
+      vue: 'vue/dist/vue.esm.js',
+    }
+  },
   plugins: [
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}/css/[name].css`,
@@ -106,5 +125,6 @@ module.exports = {
         { from: `${PATHS.src}/static`, to: '' },
       ],
     }),
+    new VueLoaderPlugin(),
   ],
 }

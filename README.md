@@ -13,6 +13,7 @@
  - [Начальное знакомство с Webpack](#lesson-1)
  - [Подкючеиие препроцессоров](#lesson-2)
  - [Разделение `webpack.config`. Обработка изображений и `HTML`](#lesson-3)
+ - [Подключение `VUE` и `VUEX`](#lesson-4)
 
 ---
 
@@ -46,11 +47,25 @@
 
 [Самое важное по WEBPACK 4 - обработка картинок и html. Webpack-merge. Обработка статических файлов](https://www.youtube.com/watch?v=QF3EcxymIcc&list=PLkCrmfIT6LBQWN02hNj6r1daz7965GxsV&index=3)
 
-Это будет самое важное видео по webpack. Обработаем все возможные файлы, картинки (изображения) и статичные файлы при помощи плагина copy-webpack-plugin. Также подключим Webpack-merge - для разбивание dev и build конфига. Настроим карту для стилей. Сделаем livereload для html..
+Это будет самое важное видео по webpack. Обработаем все возможные файлы, картинки (изображения) и статичные файлы при помощи плагина copy-webpack-plugin. Также подключим Webpack-merge - для разбивание dev и build конфига. Настроим карту для стилей. Сделаем livereload для html.
 
 Дополнительно сделано:
 
 - настройка `webpack.config` под текущие версии `webpack-merge`, `copy-webpack-plugin`.
+
+[Содержание ↑](#contain)
+
+<a id="lesson-4"></a>
+## Подключение `VUE` и `VUEX`
+
+[WEBPACK 4. Подключение VUE и VUEX, забываем jQuery. Использование vuejs в верстке.](https://www.youtube.com/watch?v=LXkSIqqgyPI&list=PLkCrmfIT6LBQWN02hNj6r1daz7965GxsV&index=4)
+
+Webpack 4, подключение и использование VUE и VUEX, использование Vue.js в верстке. Регистрация и использование vue компонентов. Забываем jQuery и переходим на vue.js!
+
+Дополнительно сделано:
+
+- поддержка IE10;
+- загружаются автоматически все vue компоненты.
 
 [Содержание ↑](#contain)
 
