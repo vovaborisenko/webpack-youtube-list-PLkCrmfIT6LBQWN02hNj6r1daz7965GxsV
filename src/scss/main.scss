@@ -1,0 +1,73 @@
+@import 'utils/libs';
+@import 'utils/vars';
+@import 'utils/mixins';
+@import 'utils/fonts';
+@import 'utils/reset';
+
+html {
+  height: 100%;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  line-height: $mainLineHeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $mainFontColor;
+  @media screen and (min-width: $smTableWidth) {
+    font-size: 15px;
+  }
+  @media screen and (min-width: $smDesktopWidth) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: $desktopWidth) {
+    font-size: 18px;
+  }
+}
+
+section,
+.section {
+  position: relative;
+  padding: 20px 0;
+  @media screen and (min-width: $tableWidth) {
+    padding: 28px 0;
+  }
+  @media screen and (min-width: $smDesktopWidth) {
+    padding: 36px 0;
+  }
+  @media screen and (min-width: $desktopWidth) {
+    padding: 40px 0;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  flex: 0 0 auto;
+  margin: 0 auto;
+  @media screen and (min-width: $tableWidth) {
+    max-width: $tableWidth;
+  }
+  @media screen and (min-width: $smDesktopWidth) {
+    max-width: $smDesktopWidth;
+  }
+  @media screen and (min-width: $desktopWidth) {
+    max-width: $desktopWidth;
+  }
+}
+
+// Modules:
+// example: @import "modules/my-module.scss";
