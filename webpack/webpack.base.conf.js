@@ -21,9 +21,21 @@ module.exports = {
     ],
   },
   output: {
-    filename: `${PATHS.assets}/js/[name].js`,
+    filename: `${PATHS.assets}/js/[name].[contenthash:8].js`,
     path: PATHS.dist,
     publicPath: '/',
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          name: 'vendors',
+          test: /node_modules/,
+          chunks: 'all',
+          enforce: true,
+        },
+      },
+    },
   },
   module: {
     rules: [
@@ -112,10 +124,9 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}/css/[name].css`,
+      filename: `${PATHS.assets}/css/[name].[contenthash:8].css`,
     }),
     new HtmlWebpackPlugin({
-      hash: false,
       template: `${PATHS.src}/index.html`,
       filename: './index.html',
     }),
